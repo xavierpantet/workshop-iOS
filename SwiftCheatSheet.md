@@ -29,7 +29,7 @@ var averageGrade = 5.36
 sont des déclarations valides.
 
 ### Constantes
-Les constantes sont des variables dont la valeur ne peut pas être modifiée une fois qu'elles ont été assignées. Leur déclaration est identique aux variables à l'exception du mot clé `var` remplacé par `val`:
+Les constantes sont des variables dont la valeur ne peut pas être modifiée une fois qu'elles ont été assignées. Leur déclaration est identique aux variables à l'exception du mot clé `var` remplacé par `let`:
 
 ```swift
 let numberOfConflictsInRepo: Int = 17
