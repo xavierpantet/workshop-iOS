@@ -54,29 +54,30 @@ __Conseil:__ utilisez des constantes autant que possible!
 Sans surprise, Swift vous offre la possibilité d'écrire des `if-then-else`:
 
 ```swift
-if(lang == "Swift") {
-    print("❤️")
+if(hoursBeforeDeadline > 24) {
+    print("😎")
 }
-else if(lang == "Javascript") {
-    print("🤯")
+else if(hoursBeforeDeadline > 12) {
+    print("☕️")
+}
+else if(hoursBeforeDeadline > 0) {
+    print("😅")
 }
 else {
-    print("👌🏻")
+    print("😐")
 }
 ```
 
 Syntaxe `switch`:
 
 ```swift
-switch(confusionLevel) {
-    case 0:
-        goOn()
-    case 1, 2:
-        askQuestions()
-    case 3:
-        askMoreQuestions()
+switch(lang) {
+    case "Swift":
+        print("❤️")
+    case "Javascript", "Lisp":
+        print("🤯")
     default:
-        drinkCoffee()
+        print("👌🏻")
 }
 ```
 
@@ -90,9 +91,7 @@ for i in 0...10 {
 ```
 
 ```swift
-/*
-Boucle  for avec borne supérieure exclusive (utile pour éviter les overflow quand on parcourt des tableaux...)
-*/
+// Boucle  for avec borne supérieure exclusive (utile pour éviter les overflow quand on parcourt des tableaux...)
 for i in 0..<10 {
     print(i)
 }
@@ -100,6 +99,7 @@ for i in 0..<10 {
 ```
 
 ```swift
+// Classical while
 while(condition) {
     doStuff()
 }
@@ -134,7 +134,7 @@ for name in dreamTeam {
 Les fonctions sont déclarées grâce au mot clé `func`, de la manière suivante:
 
 ```
-func nom(parametre: Type, parametre: Type, ...) -> Type {
+func nom(parameter: Type, parameter: Type, ...) -> Type {
     code + return
 }
 ```
