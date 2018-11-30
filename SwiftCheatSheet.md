@@ -165,19 +165,19 @@ let intVal: Int = optInt! // intVal contient 5
 let emptyIntVal: Int = emptyOptInt! // BOOOOM
 ```
 
-En règle générale, l'utilisation du force-upwrap est déconseillée, à moins que vous soyez certain que l'`Optional` n'est pas vide. Le test peut être effectué avec `isEmpty`:
+En règle générale, l'utilisation du force-upwrap est déconseillée, à moins que vous soyez certain que l'`Optional` n'est pas vide. Le test peut être effectué avec `==`:
 
 ```swift
-optInt.isEmpty // false
-emptyOptInt.isEmpty // true
+optInt == nil // false
+emptyOptInt == nil // true
 ```
 
 ### Safe unwrap
 Pour éviter les déceptions immenses infligées par l'ouverture d'un cadeau vide, Swift propose une forme de safe unwrap qui teste si un `Optional` est vide avant de l'ouvrir. Une manière de faire est:
 
 ```swift
-if(myOptional.isEmpty) {
-    myValue = myOptional! // Beurk, mais ok
+if(myOptional != nil) {
+    let myValue = myOptional! // Beurk, mais ok
 }
 ```
 
@@ -192,10 +192,10 @@ else {
 }
 ```
 
-ainsi que le `guard let`:
+ainsi que le `guard let else`:
 
 ```swift
-guard let myValue = myOptional {
+guard let myValue = myOptional else {
     // si myOptional est vide
 }
 // Ici myValue peut-être utilisé et contient la valeur contenue dans myOptional s'il n'était pas vide
@@ -205,7 +205,7 @@ Cette dernière syntaxe peut paraître surprenante, mais elle s'utilise fréquem
 
 ```swift
 func increment(optInt: Int?) -> Int? {
-    guard let intValue = optInt { return nil }
+    guard let intValue = optInt else { return nil }
     return intValue + 1
 }
 ```
@@ -230,7 +230,7 @@ Maintenant que nous avons vu les `Optionals`, en voici une utilisation judicieus
 Dans notre exemple:
 
 ```swift
-programmingSkills["Xavier"] // Optional[0]
+programmingSkills["Xavier"] // 0
 programmingSkills["Steve"] // nil
 ```
 
@@ -274,7 +274,7 @@ class Programmer {
     func searchStackOverflow(_ query: String) -> String {
         numberOfHoursSpentDebugging += 10
 
-        val q = Query("https://stackoverflow.com/search?q=" + query)
+        let q = Query("https://stackoverflow.com/search?q=" + query)
 
         return q.response()
     }
