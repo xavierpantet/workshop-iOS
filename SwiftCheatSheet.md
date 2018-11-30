@@ -246,7 +246,7 @@ if let xavierSkills = programmingSkills["Xavier"] {
 Swift est un langage orienté objet, qui vous permet donc de déclarer des classes, de la manière suivante:
 
 ```
-class Blabla {
+class Name {
     Definitions (variables, constants, methods)
 }
 ```
