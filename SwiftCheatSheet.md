@@ -169,7 +169,7 @@ En règle générale, l'utilisation du force-upwrap est déconseillée, à moins
 
 ```swift
 optInt.isEmpty // false
-emptyOptInt.isEmpt // true
+emptyOptInt.isEmpty // true
 ```
 
 ### Safe unwrap
@@ -257,7 +257,7 @@ Par exemple:
 class Programmer {
     var name: String
     var repo: GitRepository?
-    var numberOfHoursSpentDebugging: Long
+    var numberOfHoursSpentDebugging: Int
 
     init(_ name: String, repo: GitRepository?) {
         self.name = name
