@@ -109,8 +109,8 @@ while(condition) {
 Les tableaux sont des collections __homogènes__ (= de même type), dont la déclaration est la suivante:
 
 ```swift
-val dreamTeam: [String] = ["Riri", "Fifi", "Loulou"]
-val primesLessThanTen: [Int] = [2, 3, 5, 7]
+let dreamTeam: [String] = ["Riri", "Fifi", "Loulou"]
+let primesLessThanTen: [Int] = [2, 3, 5, 7]
 ```
 
 ### Itérer sur des tableaux
@@ -161,8 +161,8 @@ Les `Optionals` peuvent être vus comme des paquets cadeaux qui peuvent contenir
 Le force-unwrap permet de récupérer directement la valeur contenue dans l'`Optional`. Par contre... elle fait crasher l'app si l'`Optional` est vide (vous aussi vous êtes déçus quand vous ouvrez un paquet cadeau vide, non?)
 
 ```swift
-let intVal = optInt! // intVal contient 5
-let emptyIntVal = emptyOptInt! // BOOOOM
+let intVal: Int = optInt! // intVal contient 5
+let emptyIntVal: Int = emptyOptInt! // BOOOOM
 ```
 
 En règle générale, l'utilisation du force-upwrap est déconseillée, à moins que vous soyez certain que l'`Optional` n'est pas vide. Le test peut être effectué avec `isEmpty`:
@@ -204,7 +204,7 @@ guard let myValue = myOptional {
 Cette dernière syntaxe peut paraître surprenante, mais elle s'utilise fréquemment dans des fonctions:
 
 ```swift
-func f(optInt: Int?) -> Int? {
+func increment(optInt: Int?) -> Int? {
     guard let intValue = optInt { return nil }
     return intValue + 1
 }
@@ -222,7 +222,7 @@ val name: [Type: Type] = [Clé: Valeur, Clé: Valeur, ...]
 Par exemple:
 
 ```swift
-val programmingSkills: [String: Int] = ["Tim": 90, "Amandine": 70, "Luca": 85, "Xavier": 0, "Hector": -10]
+let programmingSkills: [String: Int] = ["Tim": 90, "Amandine": 70, "Luca": 85, "Xavier": 0, "Hector": -10]
 ```
 
 Maintenant que nous avons vu les `Optionals`, en voici une utilisation judicieuse: la méthode `get` sur les `Dictionaries` retourne un `Optional`.
