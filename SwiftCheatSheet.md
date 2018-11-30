@@ -19,7 +19,7 @@ var counter: Int = 0
 var averageGrade: Double = 5.36
 ```
 
-En pratique, le compilateur est souvent capable d'inférer lui-même le type des variables, ainsi il peut être omis. Dans ce cas,
+Même si ce n'est pas forcément recommandé, le compilateur est souvent capable d'inférer lui-même le type des variables, ainsi il peut être omis. Dans ce cas,
 
 ```swift
 var lang = "Swift 4"
@@ -32,15 +32,15 @@ sont des déclarations valides.
 Les constantes sont des variables dont la valeur ne peut pas être modifiée une fois qu'elles ont été assignées. Leur déclaration est identique aux variables à l'exception du mot clé `var` remplacé par `val`:
 
 ```swift
-val notFound: Int = 404
-val meaningOfLife = 42
+let numberOfConflictsInRepo: Int = 17
+let meaningOfLife: Int = 42
 ```
 *Notez que comme pour les variables, le compilateur peut également inférer le type dans la plupart des cas.*
 
 Dès lors, ce genre de tournures fera crasher votre app à la compilation:
 
 ```swift
-meaningOfLife += 1 // WTF
+meaningOfLife += 1 // Ne compile pas, meaningOfLife est une constante!
 ```
 
 Les constantes offrent deux avantages majeurs par rapport aux variables:
@@ -105,19 +105,12 @@ while(condition) {
 }
 ```
 
-```swift
-// Equivalent du do...while
-repeat {
-    doStuff()
-} while(condition)
-```
-
 ## Tableaux
 Les tableaux sont des collections __homogènes__ (= de même type), dont la déclaration est la suivante:
 
 ```swift
 val dreamTeam: [String] = ["Riri", "Fifi", "Loulou"]
-val primesLessThanTen = [2, 3, 5, 7]
+val primesLessThanTen: [Int] = [2, 3, 5, 7]
 ```
 
 ### Itérer sur des tableaux
@@ -156,8 +149,8 @@ Contrairement à beaucoup de langages, Swift propose une solution élégante pou
 Un `Optional` est un type qui peut contenir soit une valeur quelconque dépendamment de son type, soit une valeur spéciale indiquant qu'elle est vide: `nil`. Par exemple:
 
 ```swift
-val optInt: Int? = 5
-val emptyOptInt: Int? = nil
+let optInt: Int? = 5
+let emptyOptInt: Int? = nil
 ```
 
 Ici, `optInt` et `emptyOptInt` ont le même type: `Int?`. La différence est que `optInt` contient effectivement une valeur de type `Int` (ici 5) tandis que `emptyOptInt` est vide est contient donc la valeur spéciale `nil`.
@@ -168,22 +161,22 @@ Les `Optionals` peuvent être vus comme des paquets cadeaux qui peuvent contenir
 Le force-unwrap permet de récupérer directement la valeur contenue dans l'`Optional`. Par contre... elle fait crasher l'app si l'`Optional` est vide (vous aussi vous êtes déçus quand vous ouvrez un paquet cadeau vide, non?)
 
 ```swift
-val intVal = optInt! // intVal contient 5
-val emptyIntVal = emptyOptInt! // BOOOOM
+let intVal = optInt! // intVal contient 5
+let emptyIntVal = emptyOptInt! // BOOOOM
 ```
 
-En règle générale, l'utilisation du force-upwrap est déconseillée, à moins que vous soyez certain que l'`Optional` n'est pas vide. Le test peut être effectué avec `isEmpty()`:
+En règle générale, l'utilisation du force-upwrap est déconseillée, à moins que vous soyez certain que l'`Optional` n'est pas vide. Le test peut être effectué avec `isEmpty`:
 
 ```swift
-optInt.isEmpty() // false
-emptyOptInt.isEmpty() // true
+optInt.isEmpty // false
+emptyOptInt.isEmpt // true
 ```
 
 ### Safe unwrap
 Pour éviter les déceptions immenses infligées par l'ouverture d'un cadeau vide, Swift propose une forme de safe unwrap qui teste si un `Optional` est vide avant de l'ouvrir. Une manière de faire est:
 
 ```swift
-if(myOptional.isEmpty()) {
+if(myOptional.isEmpty) {
     myValue = myOptional! // Beurk, mais ok
 }
 ```
@@ -217,7 +210,7 @@ func f(optInt: Int?) -> Int? {
 }
 ```
 
-Cette fonction retourne `nil` si le paramètre `optInt` est vide, sinon elle retourne la valeur contenue dans `optInt` incrémentée de 1.
+Cette fonction retourne `nil` si le paramètre `optInt` est vide, sinon elle retourne la valeur contenue dans `optInt` incrémentée de 1. Le `guard let` agit comme un garde-fou et permet de ne pas surcharger le code pour gérer des cas "rares".
 
 ## Dictionaires
 Les dictionaires sont des associations clé-valeurs supportées par Swift. Leur déclaration est la suivante:
@@ -229,7 +222,7 @@ val name: [Type: Type] = [Clé: Valeur, Clé: Valeur, ...]
 Par exemple:
 
 ```swift
-val programmingSkills = ["Tim": 90, "Amandine": 70, "Luca": 85, "Xavier": 0, "Hector": -10]
+val programmingSkills: [String: Int] = ["Tim": 90, "Amandine": 70, "Luca": 85, "Xavier": 0, "Hector": -10]
 ```
 
 Maintenant que nous avons vu les `Optionals`, en voici une utilisation judicieuse: la méthode `get` sur les `Dictionaries` retourne un `Optional`.
@@ -238,7 +231,7 @@ Dans notre exemple:
 
 ```swift
 programmingSkills["Xavier"] // Optional[0]
-programmingSkills["Steve"] // nil!
+programmingSkills["Steve"] // nil
 ```
 
 Pour récupérer proprement une valeur:
@@ -284,7 +277,6 @@ class Programmer {
         val q = Query("https://stackoverflow.com/search?q=" + query)
 
         return q.response()
-        
     }
 
 }
@@ -295,8 +287,8 @@ La classe peut-être utilisée comme ceci:
 ```swift
 val xavier = Programmer("Xavier", repo: PindexRepository())
 
-xavier.searchStackOverflow("How to make Javascript suck less?")
-xavier.searchStackOverflow("Do I really need jQuery?")
-xavier.searchStackOverflow("Software developer career alternatives")
+xavier.searchStackOverflow("How to fix my code")
+xavier.searchStackOverflow("How to fix my job")
+xavier.searchStackOverflow("How to fix my life")
 xavier.panic()
 ```
