@@ -177,7 +177,7 @@ Pour éviter les déceptions immenses infligées par l'ouverture d'un cadeau vid
 
 ```swift
 if(myOptional == nil) {
-    myValue = myOptional! // Beurk, mais ok
+    let myValue = myOptional! // Beurk, mais ok
 }
 ```
 
