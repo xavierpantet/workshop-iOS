@@ -146,7 +146,7 @@ func metalify(name: String) -> String {
     return name + " is so metal!"
 }
 
-metalify("iOS") // "iOS is so metal!"
+metalify(name: "iOS") // "iOS is so metal!"
 ```
 *Note: une fonction qui ne retourne rien doit avoir `Void` comme type de retour.*
 
@@ -247,4 +247,56 @@ Pour récupérer proprement une valeur:
 if let xavierSkills = programmingSkills["Xavier"] {
     doStuffWithSkill(xavierSkills) // e.g make coffee
 }
+```
+
+## Classes
+Swift est un langage orienté objet, qui vous permet donc de déclarer des classes, de la manière suivante:
+
+```
+class Blabla {
+    Definitions (variables, constants, methods)
+}
+```
+
+Par exemple:
+
+```swift
+class Programmer {
+    var name: String
+    var repo: GitRepository?
+    var numberOfHoursSpentDebugging: Long
+
+    init(_ name: String, repo: GitRepository?) {
+        self.name = name
+        self.repo = repo
+        self.numberOfHoursSpentDebugging = 0
+    }
+
+    func panic() {
+        // si repo = nil, il ne se passe rien :)
+        repo?.commit("Aaaaaah!")
+        repo?.push()
+    }
+
+    func searchStackOverflow(_ query: String) -> String {
+        numberOfHoursSpentDebugging += 10
+
+        val q = Query("https://stackoverflow.com/search?q=" + query)
+
+        return q.response()
+        
+    }
+
+}
+```
+
+La classe peut-être utilisée comme ceci:
+
+```swift
+val xavier = Programmer("Xavier", repo: PindexRepository())
+
+xavier.searchStackOverflow("How to make Javascript suck less?")
+xavier.searchStackOverflow("Do I really need jQuery?")
+xavier.searchStackOverflow("Software developer career alternatives")
+xavier.panic()
 ```
