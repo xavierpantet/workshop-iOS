@@ -176,7 +176,7 @@ emptyOptInt == nil // true
 Pour éviter les déceptions immenses infligées par l'ouverture d'un cadeau vide, Swift propose une forme de safe unwrap qui teste si un `Optional` est vide avant de l'ouvrir. Une manière de faire est:
 
 ```swift
-if(myOptional.isEmpty) {
+if(myOptional == nil) {
     myValue = myOptional! // Beurk, mais ok
 }
 ```
