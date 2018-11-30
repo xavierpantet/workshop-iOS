@@ -165,11 +165,11 @@ let intVal: Int = optInt! // intVal contient 5
 let emptyIntVal: Int = emptyOptInt! // BOOOOM
 ```
 
-En règle générale, l'utilisation du force-upwrap est déconseillée, à moins que vous soyez certain que l'`Optional` n'est pas vide. Le test peut être effectué avec `isEmpty`:
+En règle générale, l'utilisation du force-upwrap est déconseillée, à moins que vous soyez certain que l'`Optional` n'est pas vide. Le test peut être effectué avec `==`:
 
 ```swift
-optInt.isEmpty // false
-emptyOptInt.isEmpty // true
+optInt == nil // false
+emptyOptInt == nil // true
 ```
 
 ### Safe unwrap
