@@ -1,0 +1,88 @@
+{
+	"data": [{
+		"name": "McDonalds",
+		"type": "restaurant",
+		"category": "fast-food",
+		"description": "The most healthy food you can get on Earth.",
+		"price": 32,
+		"location":{
+			"latitude":"40.7638",
+			"longitude":"-73.9646"
+		}
+		
+	}, {
+		"name": "Burger King",
+		"type": "restaurant",
+		"category": "fast-food",
+		"price": 7,
+		"description": "Delicious burgers with a lot of vegetables",
+		"location":{
+			"latitude":"40.7665",
+			"longitude":"-73.9866"
+		}
+	}, {
+		"name": "KFC",
+		"type": "restaurant",
+		"category": "fast-food",
+		"price": 1,
+		"description": "The most american food with delicious chicken",
+		"location":{
+			"latitude":"40.7443",
+			"longitude":"-73.9975"
+		}
+	}, {
+		"name": "Villa Florius",
+		"type": "activity",
+		"category": "relax",
+		"price": 45,
+		"description": "La Villa Florius vous immerge en pleine nature. Elle combine la tradition antique des bains avec la modernité des installations, la diversité et la personnalisation des prestations et l'attachement à créer une relation forte entre vous et les experts à votre service.",
+		"location":{
+			"latitude":"40.7401",
+			"longitude":"-73.9796"
+		}
+	}, {
+		"name": "Bains et détente",
+		"type": "activity",
+		"category": "relax",
+		"price": 21,
+		"description": "Bains - détente description",
+		"location":{
+			"latitude":"40.7719",
+			"longitude":"-73.9884"
+		}
+	}],
+	
+	"categories":[{
+		"id":"discovery",
+		"name":"Découverte"
+	},
+	{
+		"id":"cultural",
+		"name":"Culturelle"
+	},
+	{
+		"id":"sport",
+		"name":"Sport"
+	},
+	{
+		"id":"relax",
+		"name":"Relax"
+	}],
+	
+	"restaurantType":[{
+		"id":"fast-food",
+		"name":"Fast Food"
+	},
+	{
+		"id":"international",
+        "name":"Cuisine internationale"
+	},
+	{
+		"id":"local",
+        "name":"Cuisine locale"
+	},
+	{
+		"id":"gastronomic",
+        "name":"Gastronomique"
+	}]
+}
