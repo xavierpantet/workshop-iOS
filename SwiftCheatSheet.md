@@ -254,44 +254,52 @@ class Name {
 Par exemple:
 
 ```swift
-class Programmer {
-    var name: String
-    var repo: GitRepository?
-    var numberOfHoursSpentDebugging: Int
-
-    init(_ name: String, repo: GitRepository?) {
-        self.name = name
-        self.repo = repo
-        self.numberOfHoursSpentDebugging = 0
+class Vehicle {
+    var color: String
+    var model: String
+    var isFlying: Bool
+    var speed: Double
+    
+    init(color: String, model: String, isFlying: Bool) {
+        self.color = color
+        self.model = model
+        self.isFlying = isFlying
+        self.speed = 0
     }
-
-    func panic() {
-        // si repo = nil, il ne se passe rien :)
-        repo?.commit("Aaaaaah!")
-        repo?.push()
+    
+    func accelerate(speedDifference: Double) {
+        speed += speedDifference
     }
-
-    func searchStackOverflow(_ query: String) -> String {
-        numberOfHoursSpentDebugging += 10
-
-        let q = Query("https://stackoverflow.com/search?q=" + query)
-
-        return q.response()
-    }
-
 }
 ```
 
 La classe peut-être utilisée comme ceci:
 
 ```swift
-let xavier = Programmer("Xavier", repo: PindexRepository())
-
-xavier.searchStackOverflow("How to fix my code")
-xavier.searchStackOverflow("How to fix my job")
-xavier.searchStackOverflow("How to fix my life")
-xavier.panic()
+let ufo = Vehicle(color: "Grey", model: "UFO-121", isFlying: true)
+ufo.accelerate(speedDifference: 10)
+print(ufo.speed)
 ```
+
+Comme dans tous les langages orientés objet, les classes peuvent être héritées:
+
+```swift
+class Car: Vehicle {
+    var motorType: String
+    
+    init(color: String, model: String, motorType: String) {
+        self.motorType = motorType
+        super.init(color: color, model: model, isFlying: false)
+    }
+}
+```
+
+Et voici un exemple d'utilisation:
+
+```swift
+let tesla = Car(color: "Red", model: "Tesla model S", motorType: "Electric")
+tesla.accelerate(speedDifference: 100)
+````
 
 ## StackOverflow
 Une petite note informative pour vous dire que Swift est un langage assez récent et qu'il a passablement évolué au fil des versions. Lorsque vous effectuez des recherches sur Internet, en particulier sur StackOverflow, pensez à vérifier la version de Swift utilisée dans les réponses qui sont données. Cela vous évitera pas mal d'ennuis...
