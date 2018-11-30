@@ -285,7 +285,7 @@ class Programmer {
 La classe peut-être utilisée comme ceci:
 
 ```swift
-val xavier = Programmer("Xavier", repo: PindexRepository())
+let xavier = Programmer("Xavier", repo: PindexRepository())
 
 xavier.searchStackOverflow("How to fix my code")
 xavier.searchStackOverflow("How to fix my job")
