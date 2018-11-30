@@ -292,3 +292,9 @@ xavier.searchStackOverflow("How to fix my job")
 xavier.searchStackOverflow("How to fix my life")
 xavier.panic()
 ```
+
+## StackOverflow
+Une petite note informative pour vous dire que Swift est un langage assez récent et qu'il a passablement évolué au fil des versions. Lorsque vous effectuez des recherches sur Internet, en particulier sur StackOverflow, pensez à vérifier la version de Swift utilisée dans les réponses qui sont données. Cela vous évitera pas mal d'ennuis...
+
+## Documentation
+- Documentation officielle d'Apple: [swift.org](https://swift.org) et [developer.apple.com](https://developer.apple.com/documentation/swift)
