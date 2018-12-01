@@ -4,3 +4,4 @@ Bienvenue au premier workshop Pindex, organisé en collaboration avec API! Vous 
 
 - Lire la [Swift Cheat Sheet](https://github.com/pindex/workshop-iOS/blob/master/SwiftCheatSheet.md)
 - Accéder au [fichier de données pour le projet](https://github.com/pindex/workshop-iOS/blob/master/resources/Activities.json)
+- Librairie [SwiftyJSON](https://github.com/SwiftyJSON/SwiftyJSON)
