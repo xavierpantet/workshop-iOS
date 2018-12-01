@@ -20,7 +20,67 @@
 			"latitude":"40.7665",
 			"longitude":"-73.9866"
 		}
+	},{
+		"name": "Buvette du Maillard",
+		"type": "restaurant",
+		"category": "local",
+		"price": 25,
+		"description": "La famille Cuche vous souhaite la bienvenue !",
+		"location":{
+			"latitude":"40.7665",
+			"longitude":"-73.9866"
+		}
 	}, {
+		"name": "Maharajah",
+		"type": "restaurant",
+		"category": "international",
+		"price": 25,
+		"description": "Un restaurant indien qui vous plonge dans une atmosphère digne des Mille et une nuits",
+		"location":{
+			"latitude":"40.7665",
+			"longitude":"-73.9866"
+		}
+	},{
+		"name": "La Ferme des Brandt",
+		"type": "restaurant",
+		"category": "local",
+		"price": 20,
+		"description": "De bons mets dans un des cadres les plus emblématiques du canton de Neuchâtel.",
+		"location":{
+			"latitude":"40.7665",
+			"longitude":"-73.9866"
+		}
+	},{
+		"name": "Restaurant du Grand Hôtel des Endroits",
+		"type": "restaurant",
+		"category": "gastronomic",
+		"price": 70,
+		"description": "Les sommets culinaires vous attendent provenant d'une cuisine variée et internationale.",
+		"location":{
+			"latitude":"40.7665",
+			"longitude":"-73.9866"
+		}
+	},{
+		"name": "Desperado Mexican Restaurant and Bar",
+		"type": "restaurant",
+		"category": "international",
+		"price": 25,
+		"description": "Le Mexique débarque dans vos assiettes !",
+		"location":{
+			"latitude":"40.7665",
+			"longitude":"-73.9866"
+		}
+	},{
+		"name": "Restaurant Le Bureau",
+		"type": "restaurant",
+		"category": "gastronomic",
+		"price": 30,
+		"description": "Passez un moment agréable, et surtout dans l'assiette.",
+		"location":{
+			"latitude":"40.7665",
+			"longitude":"-73.9866"
+		}
+	},{
 		"name": "KFC",
 		"type": "restaurant",
 		"category": "fast-food",
@@ -31,6 +91,56 @@
 			"longitude":"-73.9975"
 		}
 	}, {
+		"name": "MIH",
+		"type": "activity",
+		"category": "cultural",
+		"price": 10,
+		"description": "Le Musée International d'Horlogerie de La Chaux-de-Fonds est un lieu dédié à l'art de l'horlogerie, véritable symbole de la ville.",
+		"location":{
+			"latitude":"40.7443",
+			"longitude":"-73.9975"
+		}
+	}, {
+		"name": "Bois du Petit-Château",
+		"type": "activity",
+		"category": "cultural",
+		"price": 0,
+		"description": "Véritable monument historique de La Chaux-de-Fonds, le zoo-vivarium du Bois du Petit-Château présente la faune de nos montagnes. Et l'entrée est gratuite !",
+		"location":{
+			"latitude":"40.7443",
+			"longitude":"-73.9975"
+		}
+	},{
+		"name": "Brasserie B'art",
+		"type": "activity",
+		"category": "relax",
+		"price": 5,
+		"description": "20 bières artisanales ET disponible à la pression, pas encore convaincu ?",
+		"location":{
+			"latitude":"40.7443",
+			"longitude":"-73.9975"
+		}
+	},{
+		"name": "Escape Or Not",
+		"type": "activity",
+		"category": "discovery",
+		"price": 20,
+		"description": "Escape Or Not vous accueille pour vivre une expérience ludique autours de deux scénarios qui vous immergeront dans une réalité parallèle l'espace d'un moment !",
+		"location":{
+			"latitude":"40.7443",
+			"longitude":"-73.9975"
+		}
+	},{
+		"name": "A la découverte de l'Hôtel-de-Ville du Landeron",
+		"type": "activity",
+		"category": "discovery",
+		"price": 8,
+		"description": "Un bâtiment imposant au coeur du bourg médiéval, un musée étonnant et une équipe heureuse de vous faire découvrir ce petit bijou !",
+		"location":{
+			"latitude":"40.7443",
+			"longitude":"-73.9975"
+		}
+	},{
 		"name": "Villa Florius",
 		"type": "activity",
 		"category": "relax",
@@ -41,6 +151,26 @@
 			"longitude":"-73.9796"
 		}
 	}, {
+		"name": "La Trotteuse",
+		"type": "activity",
+		"category": "sport",
+		"price": 3,
+		"description": "La traditionnelle course de Noël de La Chaux-de-Fonds revient cette année !",
+		"location":{
+			"latitude":"40.7443",
+			"longitude":"-73.9975"
+		}
+	},{
+		"name": "Denka Club Golf",
+		"type": "activity",
+		"category": "sport",
+		"price": 15,
+		"description": "Un golf d'entraînement accessible à tous !",
+		"location":{
+			"latitude":"40.7443",
+			"longitude":"-73.9975"
+		}
+	},{
 		"name": "Bains et détente",
 		"type": "activity",
 		"category": "relax",
