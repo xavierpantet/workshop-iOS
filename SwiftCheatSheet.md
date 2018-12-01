@@ -306,3 +306,4 @@ Une petite note informative pour vous dire que Swift est un langage assez récen
 
 ## Documentation
 - Documentation officielle d'Apple: [swift.org](https://swift.org) et [developer.apple.com](https://developer.apple.com/documentation/swift)
+- eBook ["App Development with Swift"](https://xp.apple.com/report/2/its_mail_sf?responseType=redirect&emailType=share_ibook&lang=en_us&eventType=linkClick&redirectUrl=https%3A%2F%2Fitunes.apple.com%2Fch%2Fbook%2Fapp-development-with-swift%2Fid1219117996%3Fl%3Den%26mt%3D11) par Apple
